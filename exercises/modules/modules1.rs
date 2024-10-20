@@ -4,9 +4,10 @@
 // hint.
 
 
+
 mod sausage_factory {
     // Don't let anybody outside of this module see this!
-    fn get_secret_recipe() -> String {
+     fn get_secret_recipe() -> String {
         String::from("Ginger")
     }
 

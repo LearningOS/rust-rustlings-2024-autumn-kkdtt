@@ -9,12 +9,12 @@
 
 struct ColorClassicStruct {
     // TODO: Something goes here
-    red: u8,
-    green: u8,
-    blue: u8,
+    red:u8,
+    green:u8,
+    blue:u8,
 }
 
-struct ColorTupleStruct(u8,u8,u8/* TODO: Something goes here */);
+struct ColorTupleStruct(u8, u8, u8);
 
 #[derive(Debug)]
 struct UnitLikeStruct;
@@ -23,17 +23,14 @@ struct UnitLikeStruct;
 mod tests {
     use super::*;
 
+
     #[test]
     fn classic_c_structs() {
         // TODO: Instantiate a classic c struct!
-        // let green =
-
-        let green = ColorClassicStruct{
-
-            red: 0,
-            green: 255,
-            blue: 0,
-        };
+         let green =ColorClassicStruct {
+            red:0,
+            green:255,
+            blue:0};
 
         assert_eq!(green.red, 0);
         assert_eq!(green.green, 255);
@@ -42,10 +39,8 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
-        // TODO: Instantiate a tuple struct!
-        // let green =
-
-        let green=ColorTupleStruct(0,255,0);
+        
+        let green =ColorTupleStruct(0, 255, 0);
 
         assert_eq!(green.0, 0);
         assert_eq!(green.1, 255);
@@ -55,12 +50,9 @@ mod tests {
     #[test]
     fn unit_structs() {
         // TODO: Instantiate a unit-like struct!
-        // let unit_like_struct =
-        // let unit_like_struct = UnitLikeStruct;
-        
-        let message = format!("{:?}s are fun!", UnitLikeStruct);
+        let unit_like_struct =UnitLikeStruct;
+        let message = format!("{:?}s are fun!", unit_like_struct);
 
         assert_eq!(message, "UnitLikeStructs are fun!");
     }
 }
-
